@@ -66,13 +66,14 @@ func generate(jsonData map[string]interface{}) {
 					Title:   key,
 					MapData: customType,
 				})
+				idx := len(stack) - 1
 				switch dataType {
 				case enums.Object:
 					customTypeCount++
-					base += fmt.Sprintf(fieldString, util.ToCamelCase(key), util.Capitalize(stack[i+1].Title), key)
+					base += fmt.Sprintf(fieldString, util.ToCamelCase(key), util.Capitalize(stack[idx].Title), key)
 				case enums.SliceOfObjects:
 					customTypeCount++
-					base += fmt.Sprintf(fieldString, util.ToCamelCase(key), "[]"+util.Capitalize(stack[i+1].Title), key)
+					base += fmt.Sprintf(fieldString, util.ToCamelCase(key), "[]"+util.Capitalize(stack[idx].Title), key)
 				default:
 					base += fmt.Sprintf(fieldString, util.ToCamelCase(key), dataType, key)
 				}
