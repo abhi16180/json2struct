@@ -1,0 +1,14 @@
+*.o
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.app
+.idea/*
+.history/**
+.vscode/**
+.DS_Store
+venv/**
+secret.json
