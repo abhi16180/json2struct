@@ -4,7 +4,7 @@ This tool converts JSON data into Go struct definitions.
 
 ## Overview
 
-The JSON to Struct Converter is a simple tool written in Go that generates Go struct definitions based on JSON input. It's useful for quickly creating Go struct types that match the structure of JSON data.
+The JSON to Struct Generator is a simple tool written in Go that generates Go struct definitions based on JSON input. It's useful for quickly creating Go struct types that match the structure of JSON data.
 
 ## Features
 
