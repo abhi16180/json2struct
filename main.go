@@ -6,6 +6,7 @@ import (
 	"golang.design/x/clipboard"
 	"io"
 	"jsontostruct/enums"
+	"jsontostruct/functions"
 	"jsontostruct/util"
 	"jsontostruct/views"
 	"log"
@@ -21,6 +22,9 @@ func main() {
 	}
 	if len(args) > 1 {
 		filePath = args[1]
+	} else {
+		fmt.Println("Please provide the file path as an argument")
+		return
 	}
 	file, err := os.Open(filePath)
 	if err != nil {
@@ -55,7 +59,7 @@ func generate(jsonData map[string]interface{}) {
 	for i := 0; i < len(stack); i++ {
 		base := "type " + util.Capitalize(stack[i].Title) + " struct {\n"
 		for key, value := range stack[i].MapData {
-			dataType, customType := util.GetType(value)
+			dataType, customType := functions.GetType(value)
 			if customType != nil {
 				// push customType to stack till each field is resolved
 				stack = append(stack, views.ObjectInfo{
@@ -80,5 +84,5 @@ func generate(jsonData map[string]interface{}) {
 		generatedString += base
 	}
 	clipboard.Write(clipboard.FmtText, []byte(generatedString))
-	log.Default().Println("struct is generated and copied to clipboard")
+	log.Default().Println("Generated struct is copied to clipboard, you can paste anywhere now.")
 }
