@@ -50,6 +50,7 @@ func generate(jsonData map[string]interface{}) {
 	})
 
 	customTypeCount := 0
+	generatedString := ""
 	fieldString := "%v %v `json:\"%v\"`\n"
 	for i := 0; i < len(stack); i++ {
 		base := "type " + util.Capitalize(stack[i].Title) + " struct {\n"
@@ -76,6 +77,8 @@ func generate(jsonData map[string]interface{}) {
 			}
 		}
 		base += "}\n"
-		fmt.Println(base)
+		generatedString += base
 	}
+	clipboard.Write(clipboard.FmtText, []byte(generatedString))
+	log.Default().Println("struct is generated and copied to clipboard")
 }
