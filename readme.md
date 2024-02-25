@@ -33,7 +33,11 @@ sample.json
       "name": "custom",
       "age": 30,
       "is_student": true,
-      "grades": [1, 2, 3],
+      "grades": [
+        1,
+        2,
+        3
+      ],
       "address": {
         "city": "New York",
         "zip_code": "10001",
@@ -45,11 +49,7 @@ sample.json
       "friends": [
         {
           "city": "New York",
-          "zip_code": "10001",
-          "coordinates": {
-            "latitude": 40.7128,
-            "longitude": 74.0060
-          }
+          "zip_code": "10001"
         }
       ]
     }
