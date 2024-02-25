@@ -55,7 +55,7 @@ func generate(jsonData map[string]interface{}) {
 
 	customTypeCount := 0
 	generatedString := ""
-	fieldString := "%v %v `json:\"%v\"`\n"
+	fieldString := "\t%v %v `json:\"%v\"`\n"
 	for i := 0; i < len(stack); i++ {
 		base := "type " + util.Capitalize(stack[i].Title) + " struct {\n"
 		for key, value := range stack[i].MapData {
