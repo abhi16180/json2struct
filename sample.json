@@ -1,44 +1,33 @@
 {
-    "name": "John",
-    "age": 30,
-    "is_student": false,
-    "grades": [90, 85, 95],
-    "address": {
-      "city": "New York",
-      "zip_code": "10001",
-      "coordinates": {
-        "latitude": 40.7128,
-        "longitude": -74.0060
-      }
-    },
-    "friends": [
-      {
-        "name": "Alice",
-        "age": 28,
-        "is_student": true,
-        "grades": [88, 92, 95],
-        "address": {
-          "city": "San Francisco",
-          "zip_code": "94105",
-          "coordinates": {
-            "latitude": 37.7749,
-            "longitude": -122.4194
-          }
+  "name": "John",
+  "age": 30,
+  "cars": {
+    "car1": "Ford",
+    "car2": "BMW",
+    "car3": "Fiat",
+    "custom": {
+      "name": "custom",
+      "age": 30,
+      "is_student": true,
+      "grades": [
+        1,
+        2,
+        3
+      ],
+      "address": {
+        "city": "New York",
+        "zip_code": "10001",
+        "coordinates": {
+          "latitude": 40.7128,
+          "longitude": 74.0060
         }
       },
-      {
-        "name": "Bob",
-        "age": 32,
-        "is_student": false,
-        "grades": [85, 80, 90],
-        "address": {
-          "city": "Los Angeles",
-          "zip_code": "90001",
-          "coordinates": {
-            "latitude": 34.0522,
-            "longitude": -118.2437
-          }
+      "friends": [
+        {
+          "city": "New York",
+          "zip_code": "10001"
         }
-      }
-    ]
-  }	
+      ]
+    }
+  }
+}
