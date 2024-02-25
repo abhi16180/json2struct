@@ -60,37 +60,36 @@ sample.json
 sample output
 ```go
 type Base struct {
-Name string  `json:"name"`
-Age  float64 `json:"age"`
-Cars Cars    `json:"cars"`
+    Name string  `json:"name"`
+    Age  float64 `json:"age"`
+    Cars Cars    `json:"cars"`
 }
 type Cars struct {
-Car1   string `json:"car1"`
-Car2   string `json:"car2"`
-Car3   string `json:"car3"`
-Custom Custom `json:"custom"`
+    Car1   string `json:"car1"`
+    Car2   string `json:"car2"`
+    Car3   string `json:"car3"`
+    Custom Custom `json:"custom"`
 }
 type Custom struct {
-Age       float64   `json:"age"`
-IsStudent bool      `json:"is_student"`
-Grades    []float64 `json:"grades"`
-Address   Address   `json:"address"`
-Friends   []Friends `json:"friends"`
-Name      string    `json:"name"`
+    Age       float64   `json:"age"`
+    IsStudent bool      `json:"is_student"`
+    Grades    []float64 `json:"grades"`
+    Address   Address   `json:"address"`
+    Friends   []Friends `json:"friends"`
+    Name      string    `json:"name"`
 }
 type Address struct {
-City        string      `json:"city"`
-ZipCode     string      `json:"zip_code"`
-Coordinates Coordinates `json:"coordinates"`
+    City        string      `json:"city"`
+    ZipCode     string      `json:"zip_code"`
+    Coordinates Coordinates `json:"coordinates"`
 }
 type Friends struct {
-ZipCode string `json:"zip_code"`
-City    string `json:"city"`
+    ZipCode string `json:"zip_code"`
+    City    string `json:"city"`
 }
 type Coordinates struct {
-Latitude  float64 `json:"latitude"`
-Longitude float64 `json:"longitude"`
+    Latitude  float64 `json:"latitude"`
+    Longitude float64 `json:"longitude"`
 }
-
 ```
 
